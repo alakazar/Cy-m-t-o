@@ -1,0 +1,45 @@
+Here are the options:
+
+File optoins:
+
+-f <name.CSV> input file (.csv file required)
+
+The weather options :
+
+-w: wind wind ((w)ind )produces as output the average orientation and average speed of the winds for each station.
+	When we talk about average, it will be a matter of summing for each component of the vector, and averaging once all the vectors have been processed.
+	We will therefore have an average on the X axis and an average on the Y axis: the two results provide the average modulus and orientation required. 
+	The data will be sorted by ascending station identifier.
+
+-h : altitude ((h)eight).output the altitude for each station. Altitudes will be sorted in descending order.
+
+-m : humidity ((m)oisture ). Outputs the maximum humidity for each station. 
+	The humidity values will be sorted in descending order
+
+-d<min> <max>: (d)ates the output data are in the date range [<min>..<max>]inclusive.
+	The format of the dates is a string of type YYYY-MM-DD(year-month-day).
+
+-t<mode>
+-p<mode>
+
+	value of<mode>:
+	1: outputs the minimum, maximum and average temperatures (or pressures)per station in ascending order of station number.
+	2: outputs the average temperatures (or pressures) by date/time, sorted in chronological order.
+		The average is done on all the stations.
+	3 : outputs the temperatures (or pressures) by date/time per station. They will be sorted first by chronological order,
+		then in ascending order of the station ID.
+
+Geographical limitation options :
+
+-F : (F)rance: France + Corsica.
+-G : (G)uyane française.
+-S : (S)aint-Pierre and Miquelon: island located east of Canada.
+-A: (A)ntilles.
+-O: (O)Indian Ocean.
+-Q : antarcti(Q)ue.
+
+The sorting options :
+
+--tab: sorting performed using a linear structure (either an array or a linked list).
+--abr: sorting is done using an ABR structure.
+--avl: sorting is done with a structure of type AVL.
